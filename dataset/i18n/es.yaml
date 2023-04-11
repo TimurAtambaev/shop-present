@@ -1,0 +1,588 @@
+es:
+  certificateFile:
+    certificate: Certificado
+    description: "Este Certificado es una herramienta electrónica de marketing versátil que solo se puede utilizar
+    conforme a los Términos de uso de la comunidad en línea de nacometa.com. El Certificado no podrá considerarse como
+    una garantía, un instrumento financiero, un bono, una acción, un recibo de depósito, un certificado de hipoteca o
+    cualquier otro equivalente de dinero en efectivo."
+    expiryDate: "VÁLIDO HASTA"
+    holderTitle: TITULAR
+  components:
+    changeEmail:
+      btn: Cambiar
+      label: "Introduzca un nuevo correo electrónico"
+      successText: "Se ha enviado un enlace de confirmación a su dirección de\
+        \ correo electrónico. Sígalo para completar la actualización de su\
+        \ contraseña"
+      successTitle: "¡Terminado!"
+      text: "Al hacer clic en «CAMBIAR», acepto
+       el <a target='_blank' href='https://nacometa.com/termanduse/termanduse-es.html'>Acuerdo de usuario</a>
+       y el tratamiento
+         de mi información personal de acuerdo con los términos de la
+         <a target='_blank' href='https://nacometa.com/privacypolicy/privacypolicy-es.html'>Política de privacidad</a>"
+      title: "Cambiar correo electrónico"
+    changePassword:
+      btn: Cambiar
+      labelConfirmPass: "Repita la nueva contraseña"
+      labelNewPass: "Introduzca la nueva contraseña"
+      labelOldPass: "Introduzca la contraseña antigua"
+      successText: "La contraseña se ha cambiado correctamente."
+      successTitle: "¡Terminado!"
+      text: "Al hacer clic en «CONFIRMAR», acepto
+       el <a target='_blank' href='https://nacometa.com/termanduse/termanduse-es.html'>Acuerdo de usuario</a> y el
+         tratamiento de mi información
+         personal de acuerdo con los términos
+         de la <a target='_blank' href='https://nacometa.com/privacypolicy/privacypolicy-es.html'>Política de privacidad</a>."
+      title: "Cambiar contraseña"
+    confirmPassword:
+      btn: Terminado
+    donation:
+      from: De
+      ticketNumber: Numero de incidencia
+      ticketStatus: Estado de la incidencia
+      transferAmount: Importe de la transferencia
+    donationBox:
+      additionalDetails: Detalles adicionales
+      additionalDetailsTextNot: "¡No se necesitan detalles adicionales!"
+      appointment: "Propósito de la transferencia"
+      bankCountry: "País del banco"
+      bankName: Nombre del banco
+      bonus: "Bonificaciones de confirmación"
+      cardData: "Número de la tarjeta"
+      confirm: Confirmar
+      dispute: Abrir disputa
+      memberDetails: Datos bancarios de la persona que ha invitado
+      onConfirmation: "Esperando confirmación"
+      openChat: Comience a chatear
+      paymentAccepted: Transferencia aceptada
+      paymentDeclined: Transferencia rechazada
+      recipient: Destinatario
+      toMain: "Página de inicio"
+      totalAmount: Importe total
+      transferAmount: Importe de la transferencia
+      internalCardData: "Número de la tarjeta"
+    myDonationBox:
+      bankName: Nombre del banco
+      cancel: Cancelar
+      certificateNumber: Certificado {number}
+      confirm: Confirmar
+      dispute: Abrir disputa
+      disputeModalBtnCancel: Cancelar
+      disputeModalBtnFurther: Continuar
+      disputeModalBtnGet: Enviar problema
+      disputeModalQuerySuccessText: "Solicitud enviada correctamente. Espere la respuesta
+         en su correo electrónico."
+      disputeModalQueryTeaxtareaLabel: Detalles del problema
+      disputeModalQueryTitle: "Describa su problema. Indique los detalles relevantes:
+         certificado, número de traducción, nombre u otra información"
+      disputeModalText: "Antes de enviar su solicitud, intente encontrar una respuesta
+         en la base de datos de conocimiento o póngase en contacto con un miembro
+         de la comunidad a través del chat (si la pregunta se refiere a una traducció
+        n)"
+      forCertificate: Ir al certificado
+      certificateNo: Ir al certificado
+      incoming: Transferencia entrante
+      info: "Esta acción confirmará la recepción de los fondos sin la posibilidad
+         posterior de disputar la transferencia indicada."
+      memberLevel: Nivel {number}
+      memberStatus: Estado del miembro
+      name: Nombre
+      openChat: Comience a chatear
+      outgoing: Transferencia saliente
+      timeLeft: Tiempo restante
+      transferAmount: Importe de la transferencia
+      FAQ: FAQ
+    orderBox:
+      allPaymentsPassed: Certificados para invitar a nuevos miembros a la comunidad
+      specifyPaymentData: Certificados para invitar a nuevos miembros a la comunidad
+        de Ufandao
+      awaitingConfirmation: "Esperando confirmación: {n}"
+      certificate: Certificado
+      certificateManagement: "Gestión de certificados"
+      certificateNumber: Certificado {number}
+      continuePayment: Continuar pago
+      paymentsPassed: Pagos confirmados {current} de {total}
+      specifyDetails: Indique sus datos bancarios
+      shareText: "Este Certificado es una herramienta electrónica de marketing versátil que solo se puede utilizar
+    conforme a los Términos de uso de la comunidad en línea de nacometa.com. El Certificado no podrá considerarse como
+    una garantía, un instrumento financiero, un bono, una acción, un recibo de depósito, un certificado de hipoteca o
+    cualquier otro equivalente de dinero en efectivo"
+    orderCheckDonates:
+      applyTransfer: Confirmar transferencia
+      appointment: "Propósito de la transferencia"
+      bankCountry: "País del banco"
+      bankName: Nombre del banco
+      cardData: "Número de la tarjeta"
+      certificateNumber: Certificado {number}
+      fiveSteps: '5 pasos para compartir recursos con
+       <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>:'
+      fiveStepsDescription: '1. Verifique el certificado y transfiera 10 € a
+         la persona que lo invitó a la comunidad
+         <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>
+         <br /> 2. Ofrezca
+         asistencia gratuita y transfiera 20 € al primer participante de
+         <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>
+         <br /> 3. Ofrezca asistencia gratuita y transfiera 30 € al segundo
+         participante de
+         <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>
+         <br /> 4. Ofrezca asistencia gratuita y transfiera
+         40 € al tercer participante de
+         <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>
+         <br /> 5. Registre su
+         cuenta personal en la plataforma técnica para realizar un seguimiento
+         de los intercambios de recursos y tener en cuenta su calificación y promoció
+        n en la comunidad
+         <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>'
+      memberDetails: Datos bancarios de la persona que ha invitado
+      recipient: Destinatario
+      status: "Válido para activación"
+      steps: "Su certificado es válido para la activación. Ofrezca su primera
+         asistencia voluntaria utilizando los datos indicados anteriormente y confirme
+         la transferencia.<br /><br />En la página siguiente puede hacer 3 (tres)
+         transferencias a los miembros de la comunidad propuestos por un importe
+         de 40 €, 30 € y 20 € y luego haga clic en confirmar.<br
+         /><br />Si tiene alguna pregunta durante el proceso de transferencia, puede
+         iniciar un chat con el destinatario y obtener datos bancarios alternativos.<br
+         /><br />Después de completar todas sus transferencias, haga clic en el
+         botón «Confirmar transferencia» y espere la confirmación del
+         destinatario. No tardará más de 24 horas."
+      transferAmount: Importe de la transferencia
+  errors:
+    backend:
+      application:
+        name_exist: "La aplicación con el nombre {name} ya existe"
+        not_exist: "La aplicación con el ID {app_id} no existe"
+        numbers_successive_int: "Los números de los niveles de referencia deben
+           ser enteros sucesivos"
+      base:
+        aws_error: Error de respuesta de AWS
+        invalid_token: Token no valido
+        update_error: "Error de actualización"
+      chat:
+        invalid_template: "Plantilla no válida"
+      country:
+        invalid: "País no válido"
+        invalid_id: "ID de país {country_id} no válido"
+      donation:
+        donation_invalid_or_payed: "Donación no válida o ya pagada"
+        invalid: "Donación no válida"
+        order_invalid_or_payed: "La orden de donación no es válida o ya está
+           pagada"
+        purpose_not_exist: "El propósito con el id {id} no existe"
+      order:
+        application_not_exist: "La aplicación con el ID {app_id} no existe"
+        invalid_application: "Aplicación no válida"
+        invalid_certificate_number: "Certificado no válido"
+        invalid_order: "Orden no válida"
+        invalid_product: "Producto no válido"
+        not_exist: La orden con ID {order_id} no existe
+        payment_data_error: "Error de información de pago"
+        unverified_account: La cuenta debe verificarse
+        validation_failed: "Error al validar el certificado. Inténtelo de nuevo
+           más tarde."
+      payment_data:
+        update_error: "No se pudieron actualizar las credenciales del pago. Inté
+          ntelo de nuevo más tarde."
+      payment_type:
+        invalid_payment_type: Invalid payment type.
+        no_reserve_payment: Reserve payment system is required
+      post:
+        not_exist: "La publicación con ID {id} no existe"
+      user:
+        active: Usuario ya activo
+        blocked: Usuario ya bloqueado
+        email_exist: "Ya existe un usuario con el correo electrónico {email}"
+        email_in_use: "El correo electrónico {email} ya se está utilizando"
+        id_not_exist: No existe un usuario con el ID {user_id}
+        invalid_auth: "Información de autorización no válida"
+        invalid_auth_code: "Código de autorización no válido"
+        invalid_name: "Nombre no válido"
+        invalid_password: "Contraseña no valida"
+        invalid_reset_token: "Token de reinicio no válido"
+        new_password_same_as_old: "La nueva contraseña es igual que la antigua"
+        not_18: "Debe ser mayor de 18 años"
+        not_18_update: "Debe ser mayor de 18 años"
+        password_mismatch: "Las contraseñas no coinciden"
+        same_email: "El correo electrónico es igual que el existente"
+        terms_and_conditions: "Debe aceptar los términos y condiciones de la plataforma
+           para continuar su registro"
+        wrong_credentials: "Correo electrónico o contraseña incorrecto"
+        wrong_old_password: "Contraseña antigua incorrecta"
+        wrong_password: "Contraseña incorrecta"
+  fake:
+    news:
+      '1':
+        description: "¡Se ha lanzado el sitio web oficial de nacometa.com! Ahora
+           cada miembro de la comunidad puede compartir recursos con otros miembros
+           de la comunidad. ¡Enhorabuena a todos por este evento!"
+        title: "nacometa.com ya está activo"
+      '2':
+        description: "La comunidad nacometa.com lo felicita por registrarse como miembro.
+           ¡Ahora puede usar la interfaz conveniente e intuitiva para compartir
+           recursos y ayudar a otros miembros de la comunidad! Además, puede realizar
+           un seguimiento de sus logros en la página de su perfil. Active su primer
+           certificado para comenzar a compartir recursos y mejorar su vida con nacometa.com"
+        title: "¡Enhorabuena por registrarse!"
+  form:
+    password: "Contraseña"
+    phoneNumber: "Número de teléfono"
+  general:
+    bonus: "sin bonificaciones | {n} bonificación | {n} bonificaciones"
+    charity: Ayuda financiera
+    members: "Un miembro le invitó | Miembro {n} | Miembro {n} | Miembro {n}"
+  layouts:
+    login:
+      termsAndConditions: "Al iniciar sesión o crear una cuenta, usted acepta nuestros
+         <a target='_blank' href='https://nacometa.com/termanduse/termanduse-es.html'>Términos de uso</a> y
+         <a target='_blank' href='https://nacometa.com/privacypolicy/privacypolicy-es.html'>Política de privacidad</a>."
+    main:
+      leftSidebar:
+        achievements: Logros
+        billingInformation: "Datos de facturación"
+        help: Ayuda
+        logOut: "Cerrar sesión"
+        main: Principal
+        orders: Certificados
+        payments: Pagos
+        profile: "Configuración del perfil"
+        settings: "Configuración"
+      mobileSidebar:
+        docs: Política de condiciones
+        help: Ayuda
+        lang: Idioma
+        logOut: "Cerrar sesión"
+        paymentData: Detalles del banco
+        profile: "Configuración del perfil"
+        tehPlatform: Plataforma de servicio
+        about: Sobre nacometa
+      rightSidebar:
+        bonusesOnConfirmation: "Bonificaciones por confirmación"
+        bonusesPending: Bonificaciones pendientes
+        bronze: Bronce
+        gold: Oro
+        income: Ingresos
+        payments: Pagos
+        silver: Plata
+        totalAmount: Importe total
+  mail:
+    title:
+      email_change_request: "[Ufandao] Solicitud de cambio de correo electrónico"
+      email_confirmation: '[Ufandao] Confirme su registro'
+      new_transfer: '[Ufandao] Tiene una nueva transferencia'
+      operator_password_reset: "[Ufandao] Restablecimiento de contraseña"
+      password_changed: "[Ufandao] Contraseña cambiada"
+      password_recovery: "[Ufandao] Recuperación de contraseña"
+      support_request_accepted: '[Ufandao] ID de incidencia #{ticketId} aceptado'
+      transfer_accepted: '[Ufandao] Su transferencia se ha confirmado'
+      transfer_autoaccepted: '[Ufandao] La transferencia se ha confirmado por tiempo
+        de espera'
+      transfer_autoconfirmed: '[Ufandao] La transferencia se ha confirmado por tiempo
+        de espera'
+      transfer_confirmed: '[Ufandao] Ha confirmado que ha recibido correctamente
+        la transferencia'
+      transfer_sent: '[Ufandao] Su transferencia se ha enviado correctamente'
+    body:
+      email_change_request:
+        title: Confirme su nueva dirección de correo electrónico en la comunidad nacometa.com
+        hello: 'Hola'
+        intro: 'Esta dirección de correo electrónico se especificó cuando un usuario intentó
+        cambiar las direcciones de correo electrónico en el sitio web
+        <a href="https://{{publicDomain}}/index-es.html" target="_blank">nacometa.com</a>.
+        Necesitamos asegurarnos de que fue usted quien especificó esta dirección.'
+        confirmButton: 'CONFIRMAR'
+        alternativeLink: 'También puede confirmar su dirección de correo electrónico siguiendo el
+        <a href="https://{{appDomain}}/confirmemail/{{reset_token}}" target="_blank" style="text-decoration:underline;">enlace</a>.'
+        afterConfirmationInfo: 'Una vez que haya confirmado su registro, podrá recibir mensajes
+        informativos y noticias de la comunidad enviadas a la dirección de correo electrónico actual.'
+      email_confirmation:
+        title: 'Confirme su registro en la comunidad
+            <a href="https://{{publicDomain}}/index-es.html" target="_blank">nacometa.com</a>'
+        hello: 'Hola'
+        intro: 'Esta dirección de correo electrónico se especificó al registrarse en el sitio web
+        <a href="https://{{publicDomain}}/index-es.html" target="_blank">nacometa.com</a>.
+        Necesitamos asegurarnos de que fue usted quien especificó esta dirección.'
+        confirmButton: 'CONFIRMAR'
+        alternativeLink: 'También puede confirmar su dirección de correo electrónico siguiendo el
+        <a href="https://{{appDomain}}/confirmemail/{{reset_token}}" target="_blank" style="text-decoration:underline;">enlace</a>.'
+        afterConfirmationInfo: 'Una vez que haya confirmado su registro, podrá recibir mensajes
+        informativos y noticias de la comunidad.'
+      password_changed:
+        title: '{{name}} su contraseña se ha cambiado correctamente.'
+      password_recovery:
+        title: '¿Ha olvidado su contraseña?'
+        intro: 'Le puede pasar a cualquiera. Pero tenemos buenas noticias: puede restablecerla.'
+        resetPasswordButton: 'RESTABLECER LA CONTRASEÑA'
+        notYou: 'Si no solicitó una nueva contraseña,'
+        justIgnore: 'simplemente puede ignorar este mensaje.'
+      new_transfer:
+        title: Se le ha enviado una transferencia
+        intro: 'El miembro de la comunidad {{name}} ha enviado una donación de {{amount}} € a su
+        dirección a cambio del certificado número {{certificate}}.'
+        seeDonationButton: VER TRANSFERENCIAS
+        details: 'Si no ha recibido la transferencia, espere a que su banco tramite la transacción.'
+        ifFailDetails: 'Si los fondos no llegan a la cuenta que especificó dentro de los siete
+        días posteriores a la recepción de este mensaje, comuníquese con el remitente a través del
+        <a href="https://{{appDomain}}/orders/{{order_id}}/donations/{{donation_id}}/chat" target="_blank" style="color:#0068FF;">chat</a>
+        en su cuenta personal de nacometa.com'
+      transfer_sent:
+        title: "La transferencia de {{donation_parent_product_id}} se ha confirmado correctamente"
+        intro: "Ha confirmado la transferencia de {{amount}} € para el certificado número {{order_product_id}}."
+        certificateButton: Al certificado
+        waitDetails: 'waitDetails: Ahora debe esperar a que el miembro de la comunidad confirme
+        la recepción de la transferencia. La transferencia se completará correctamente dentro de
+        las 24 horas posteriores a la confirmación de la otra parte.'
+      transfer_confirmed:
+        title: "Confirmación de la recepción de {{donation_parent_product_id}}"
+        intro: "Ha confirmado la correcta recepción de la transferencia de {{amount}} € para el
+        certificado número {{order_product_id}}."
+      transfer_accepted:
+        title: "La transferencia de {{donation_parent_product_id}} se ha confirmado"
+        intro: "El receptor ha confirmado su transferencia de {{amount}} € para el certificado número {{order_product_id}}."
+        confirmButton: Al certificado
+      transfer_autoconfirmed:
+        title: 'La transferencia de {{donation_parent_product_id}} se ha confirmado automáticamente'
+        intro: 'La transferencia de {{amount}} € para el certificado número {{order_product_id}}
+        se ha confirmado automáticamente tras el vencimiento del período de espera.'
+        details: Si no ha recibido la transferencia, espere a que su banco tramite la transacción.
+        getHelpDetails: 'Si tiene alguna pregunta o ha encontrado algún problema al recibir la
+        transferencia, puede comunicarse con el remitente a través del
+        <a href="https://{{appDomain}}/orders/{{order_id}}/donations/{{donation_id}}/chat" target="_blank" style="color:#0068FF;">chat</a>
+        en su cuenta personal durante los próximos diez días.'
+      transfer_autoaccepted:
+        title: 'La transferencia de {{donation_parent_product_id}} se ha confirmado'
+        intro: 'La transferencia de {{amount}} € para el certificado número {{order_product_id}}
+        se ha confirmado automáticamente tras el vencimiento del período de espera.'
+        certificateButton: Al certificado
+        chatContact: 'Tenga en cuenta que, como la confirmación es automática, el receptor puede
+        ponerse en contacto con usted por
+        <a href="https://{{appDomain}}/orders/{{order_id}}/donations/{{donation_id}}/chat" target="_blank" style="color:#0068FF;">chat</a>
+        en los próximos diez días.'
+        provideHelpDetails: ''
+    signature:
+      withRespect: Atentamente,
+      yourCommunity: 'La comunidad <a href="https://{{publicDomain}}/index-es.html" target="_blank">nacometa.com</a>'
+      questions: Preguntas?
+  pages:
+    achievements:
+      btnShare: Compartir con amigos
+      shareText: "nacometa.com - is the first win-win fundraising community where people share ideas of mutual support and help each other achieve their dreams and goals. Go to https://nacometa.com/ right now and make all your wishes come true!"
+      certificateActivation: Compartir con un amigo
+      member: Registrarse en la comunidad
+      nacometaFriend: Invitar a 4 amigos
+      nacometaLead: Compartir con 4 miembros
+      sharingExpert: 64 personas compartieron con usted
+      sharingMaster: 16 personas compartieron con usted
+      sharingPro: 256 personas compartieron con usted
+      status: Estado
+      title: Logros
+    chat:
+      download: Descargar
+      input: Mensaje
+      manualInput: Entrada manual
+      templates: Plantillas
+    check:
+      backToCommunityButton: "INTÉNTELO DE NUEVO"
+      certificateIs: "El certificado es una herramienta electrónica de marketing
+         universal con un número único que permite a los miembros de la comunidad
+         compartir recursos entre sí."
+      checkButton: Verificar
+      failedDescription: 'Es posible que haya introducido el número de certificado
+         incorrectamente. Inténtelo de nuevo. Si el problema persiste, comuní
+        quese con la persona que le envió el certificado o con el soporte té
+        cnico de
+         <span class="p-name-text"><span class="text-primary">nacometa</span><span class="text-warning">.com</span></span>.'
+      info: "Puede recibir el certificado de la persona que lo invitó a la comunidad"
+      inputLabel: "Introducir número de certificado"
+      mustHave: "Para participar en el intercambio de recursos, debe tener un certificado,
+         que puede obtener de otro miembro de la comunidad de forma gratuita o enviá
+        ndoles 10 €. Como respuesta, un participante agradecido le concederá
+         un certificado con un número único que puede activar."
+      notFound: No se ha encontrado el certificado {number}
+      title: Verifique y active su Certificado
+      whyCheck: ''
+    confirmDonation:
+      addFile: Ancle una orden de pago
+      additionalInfo: "El destinatario tiene 24 horas para confirmar la transferencia.
+         En caso de disputas, envíe una copia de su orden de pago."
+      certificateNumber: Certificado {number}
+      confirm: Confirmar
+      confirmText: "Esta acción confirmará una transferencia voluntaria a un
+         miembro de la comunidad."
+      paymentAccount: "Número de la tarjeta"
+      pinBankData: "¡Adjunte sus extractos bancarios!"
+      recipientData: Nombre del destinatario
+      transferConfirmation: "Confirmación de la transferencia"
+      internalPaymentAccount: "Número de la tarjeta"
+    donations:
+      btnPlus: "Mostrar más resultados"
+      confirmed: Confirmadas
+      filterButton: Filtrar
+      filterOptions:
+        allAmounts: Todo
+        allTransfers: Todas las transferencias
+        apply: Aplicar
+        certificate: Certificado
+        daylong: "Todo el día"
+        fromPeriod: De
+        incomingTransfers: Transferencias entrantes
+        lastMonth: "Último mes"
+        name: Nombre
+        outgoingTransfers: Transferencias salientes
+        reset: Restablecer
+        specifyPeriod: Indique el periodo
+        title: Seleccionar las opciones de filtrado
+        untilPeriod: Hasta
+      help: "¡Gracias por su primera participación voluntaria! ¡Esto significa
+         que está ayudando a cumplir el sueño de alguien!<br/><br/>Despué
+        s de hacer 3 (tres) o más transferencias voluntarias a los participantes
+         propuestos, tendrá acceso para invitar a amigos y recibir asistencia
+         gratuita de otros miembros de la comunidad."
+      helpForParticipants: Donaciones a miembros de la comunidad
+      ifNoUpdates: "Aún no tiene notificaciones"
+      placeholderText: " "
+      pending: Pendiente
+      sortButtonAscending: Ascendente
+      sortButtonDescending: Descendente
+      toCertificates: A los certificados
+    home:
+      confirm: "Confirme su número de teléfono en la configuración del perfil.
+         Su {uniqueVariable}"
+      welcome: "¡Bienvenido/a<br />{name}!"
+    language:
+      chooseLanguage: Seleccione su idioma
+    login:
+      forgotPassword: "¿Ha olvidado su contraseña?"
+      formTitle: "Iniciar sesión"
+      passwordInput: "Contraseña"
+      registration: Registro
+      submitButton: "Inicio de sesión"
+      usernameInput: Nombre de usuario
+    paymentData:
+      additionalInfo: 'También puede especificar sus detalles financieros alternativos'
+      afterFillText: "<p>¡Enhorabuena!</p> <p>Los nuevos miembros de la comunidad
+       pueden intercambiar recursos, lo que puede acercarle a sus sueños.</p>
+        <p>Vaya a su panel de gestión de certificados y suscríbase al servicio
+         de plataforma técnica para realizar un seguimiento de las estadísticas
+        del uso compartido de recursos y obtener acceso a sus certificados personales
+        que le permiten invitar a nuevos miembros de
+         <span class='p-name-text'><span class='text-white'>Ufandao</span>
+         <span class='text-warning'>.com</span></span>.</p>"
+      attach: Adjuntar
+      backToCommunityButton: Volver a la comunidad
+      bankCountryInput: "País del banco"
+      bankNameInput: Nombre del banco (completo)
+      btnChangePayData: Cambiar
+      btnChangePayDone: Terminado
+      cardNumberInput: "Número de la tarjeta"
+      internalCardNumberInput: "Número de la tarjeta"
+      createText: "¡Información añadida!"
+      enterBankDetails: Introduzca sus datos bancarios
+      filterLabel: Certificado
+      filterTitle: Seleccionar certificado
+      info: Ahora debe proporcionar sus datos bancarios para recibir ayuda financiera
+        y donaciones de miembros de la comunidad
+        <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>.
+      messageInput: "Escriba aquí"
+      nameInput: Nombre, apellido (como aparecen en su tarjeta)
+      nextButton: Siguiente
+      nextStep: 'Para recibir ayuda financiera de otros participantes, debe especificar
+         sus datos bancarios.<br/><br/>Para obtener acceso a los datos de transferencias
+         entrantes, así como a su calificación en la comunidad
+         <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>,
+         debe iniciar sesión con su cuenta personal en la plataforma de servicios
+         especiales.'
+      notCompleteOrders: "¡No hay ninguna información de facturación que
+         actualizar!"
+      placeholderText: " "
+      passConfirmTitle: "Para confirmar esta acción introduzca su contraseña"
+      passwordInput: "Introduzca su contraseña"
+      privacyPolicy: "<a target='_blank' href='https://nacometa.com/privacypolicy/privacypolicy-es.html'>Política de tratamiento</a>
+       de datos personales"
+      successText: "Información de facturación guardada. Puede cambiar sus datos
+       en cualquier momento en la configuración de pagos."
+      successTitle: "¡Terminado!"
+      textToPointerChangePayData: "¡Atención! Comenzará a recibir fondos en sus nuevos datos bancarios cuando se hayan actualizado."
+      thanksText: "¡Gracias por ofrecer asistencia voluntaria a los miembros de la comunidad!"
+      titleToPointerChangePayData: Cambiar datos bancarios
+      totalAmount: Cantidad total de transferencias
+      amountToBeConfirmed: Monto de transferencias por confirmar
+    profile:
+      btnSave: Guardar
+      close: Cerrar
+      emailBoxBtn: "Cambiar correo electrónico"
+      emailBoxText: "Se ha enviado un correo electrónico de confirmación al
+         correo electrónico especificado"
+      emailBoxTitle: "Cambiar correo electrónico"
+      passBoxBtn: "Cambiar contraseña"
+      passBoxText: "Asegúrese de que su contraseña sea segura y nunca la revele
+         a terceros"
+      passBoxTitle: "Cambiar contraseña"
+      passConfTitle: "Confirmar con una contraseña"
+      profileUpdated: "Información del perfil actualizada"
+      text: "Puede cambiar su número de teléfono, correo electrónico o contraseñ
+        a."
+      title: Editar perfil
+    registration:
+      citizenship: "Ciudadanía"
+      confirmEmail: "Confirmar correo electrónico"
+      confirmPassword: "Confirmar contraseña"
+      dateOfBirth: Fecha de nacimiento
+      email: "Correo electrónico"
+      female: Mujer
+      firstName: Nombre
+      lastName: Apellidos
+      male: Hombre
+      password: "Contraseña"
+      photo: Haga clic para cambiar la foto de su perfil
+      submit: Enviar registro
+      termsAndConditions: "Al enviar el formulario de arriba acepta los
+       <a target='_blank' href='https://nacometa.com/termanduse/termanduse-es.html'>Términos de uso</a> y la
+       <a target='_blank' href='https://nacometa.com/privacypolicy/privacypolicy-es.html'>Política de privacidad</a>
+       de la comunidad
+       <span class='p-name-text'><span class='text-white'>Ufandao</span><span class='text-warning'>.com</span></span>."
+      title: Formulario de registro
+    restorePassword:
+      emailInputLabel: "¿Ha olvidado su contraseña?"
+      instruction: "Escriba su dirección de correo electrónico para recuperar
+         su contraseña. Recibirá un correo electrónico con las siguientes
+         instrucciones."
+      login: "Inicio de sesión"
+      restore: Restaurar
+      send: Enviar
+      title: "Restaurar formulario de contraseña"
+      wasSentMessage: "¡Se ha enviado un mensaje a su correo electrónico!"
+    thanks:
+      text: '¡Registro completado correctamente! ¡Ya es miembro de la comunidad
+         <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>!'
+      textEmail: "Correo electrónico de registro enviado a"
+      title: "¡Gracias!"
+  validate:
+    emailMustBeValid: "El correo electrónico debe ser válido."
+    isRequired: Obligatorio
+    name: Obligatorio
+  validationMessages:
+    ageCheck: "Debe ser mayor de 18 años."
+    bankCardNumberInvalid: "Número de tarjeta no valido"
+    citizenshipRequired: "Ciudadanía obligatoria."
+    dateOfBirthRequired: Fecha de nacimiento obligatoria.
+    emailRequired: "Correo electrónico obligatorio"
+    firstNameRequired: Nombre obligatorio.
+    invalidEmail: "El correo electrónico debe ser válido."
+    lastNameRequired: Apellido obligatorio.
+    minLength: "Longitud mínima del campo: {length}"
+    mismatchedEmail: "Correo electrónico incorrecto"
+    mismatchedPassword: "Las contraseñas no coinciden"
+    passwordMinLength: "8 caracteres como mínimo."
+    passwordRequired: "Contraseña obligatoria"
+    phoneNumberInvalid: "Formato de número de teléfono incorrecto"
+    photoProfileSize: "El tamaño de la foto debe ser inferior a 2 MB"
+    required: Campo obligatorio.
+  gdpr:
+    text: 'Este sitio web utiliza cookies para que sus interacciones con Ufandao.com sean más significativas y
+      pertinente. Nos ayudan a comprender mejor cómo se utilizan, proporcionan, mejoran y
+      proteger los servicios Ufandao, así como garantizar una experiencia de usuario más fácil y segura.
+      Al usar este sitio, acepta el uso de cookies de acuerdo con este aviso.
+      Para obtener más información sobre las diferentes cookies que estamos utilizando, lea el
+      <a href="https://nacometa.com/privacypolicy/privacypolicy.html" target="_blank">Política de cookies </a>.'
+    button: OK
+

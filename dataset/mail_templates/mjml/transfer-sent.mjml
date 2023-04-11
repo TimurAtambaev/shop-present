@@ -1,0 +1,12 @@
+<mj-section css-class="body-content" padding-top="0">
+    <mj-column>
+        <mj-text>
+            {intro}
+        </mj-text>
+        <mj-button href="https://{{appDomain}}/orders/{{order_id}}">{certificateButton}
+        </mj-button>
+        <mj-text>
+            {waitDetails}
+        </mj-text>
+    </mj-column>
+</mj-section>

@@ -1,0 +1,24 @@
+[flake8]
+exclude =
+	.git,
+	__pycache__,
+	env,
+	**/migrations,
+	./goldstream/tables/pg_tables.py
+
+ignore = W503,C812,SIM106,CCR001,R503,E501,N805,ANN101,ANN102,SIM119,Q441,ANN401,Q443,Q448,Q449
+select = B,C,E,F,W,T4,B901,A,T,R,Q0,SIM,Q,N8,I0,D,PT
+enable-extensions = G,B1
+
+warn-symbols =
+    obsolete_module = Warning! This module is obsolete!
+    module.obsolete_function = Warning! This function is obsolete!
+    module.submodule.constant = Warning! this variable will be removed!
+
+accept-encodings = utf-8,utf-16
+# запрещены все комментарии coding: magic, независимо от их кодировки.
+no-accept-encodings = True
+
+inline-quotes = "
+
+sql-excepted-names=link, level

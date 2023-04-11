@@ -1,0 +1,90 @@
+<mjml>
+  <mj-head>
+    <mj-preview>{title}</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="Arial, sans-serif" />
+      <mj-text
+               font-size="16px"
+               line-height="26px"
+               color="#434343"
+               vertical-align="top"
+               align="center" />
+      <mj-button
+                 font-size="16px"
+                 width="250px"
+                 height="42px"
+                 border-radius="4px" background-color="#FFA200"
+                 color="#FFFFFF"
+                 font-weight="bold" />
+      <mj-social-element border-radius="30px" icon-size="30px" />
+      <mj-class name="title" font-size="26px" line-height="29px" font-weight="bold" color="#264780" />
+      <mj-class name="footer" font-size="15px" line-height="18px" color="#FFFFFF" />
+      <mj-class name="support-link" font-size="13px" line-height="15px" />
+      <mj-class
+                name="copyright"
+                font-size="11px"
+                line-height="16px"
+                align="left"
+                padding-top="0"
+                padding-left="45px"/>
+    </mj-attributes>
+    <mj-style>
+      .footer a {
+      	text-decoration: none;
+        color: inherit;
+      }
+      a.invisible {
+      	text-decoration: none;
+      	color: inherit;
+      }
+      a {
+      	text-decoration: underline;
+      	color: inherit;
+      }
+      .body-content {
+      	color: #434343;
+      }
+      </mj-style>
+  </mj-head>
+  <mj-body background-color="#0068FF">
+
+    <mj-section>
+      <mj-column>
+				<mj-image
+                  width="200px"
+                  src="https://my.nacometa.com/img/logo-white-y-en.87fa947f.png"
+                  href="https://{landingDomain}" />
+      </mj-column>
+    </mj-section>
+    <mj-wrapper background-color="#FFFFFF">
+      <mj-section padding-bottom="0">
+        <mj-column>
+          <mj-text mj-class="title">{title}</mj-text>
+        </mj-column>
+      </mj-section>
+      {content}
+      <mj-section>
+        <mj-column>
+          <mj-text>
+            {withRespect},<br />
+            {yourCommunity}
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <mj-section css-class="footer">
+      <mj-column>
+        <mj-social>
+          <mj-social-element name="youtube" href="https://www.youtube.com/channel/UC__0erWxEsanETU3WZoKSYg/featured" />
+        </mj-social>
+        <mj-text mj-class="footer" font-weight="bold" padding-bottom="0">{questions}</mj-text>
+        <mj-text mj-class="footer support-link">
+          <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>
+        </mj-text>
+        <mj-spacer height="10px" />
+        <mj-divider border-color="#FFFFFF" border-width="0.5px" />
+        <mj-text mj-class="footer copyright">&copy; Naсometa 2021 </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,16 @@
+<mj-section css-class="body-content" padding-top="0">
+    <mj-column>
+        <mj-text>
+            {hello},
+            <br/>
+            {intro}
+        </mj-text>
+        <mj-button href="https://{{appDomain}}/confirmemail/{{reset_token}}">{confirmButton}
+        </mj-button>
+        <mj-text>{alternativeLink}</mj-text>
+        <mj-spacer height="10px"/>
+        <mj-text>
+            {afterConfirmationInfo}
+        </mj-text>
+    </mj-column>
+</mj-section>

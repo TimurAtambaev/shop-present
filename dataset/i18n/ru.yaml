@@ -1,0 +1,580 @@
+ru:
+  pong: понг
+  pongs: нет понгов |{n} понг |{n} понга |{n} понгов
+  fake:
+    news:
+      1:
+        title: Сайт <span class="p-name-text"><span class="text-white">nacometa.</span><span class="text-warning">com</span></span> запустился
+        description: Официальный сайт <span class="p-name-text"><span class="text-white">nacometa.</span><span class="text-warning">com</span></span> запущен! Теперь каждый участник сообщества централизировано может обмениваться ресурсами с другими участниками сообщества. Поздравляем каждого с этим событием!
+      2:
+        title: Поздравляем с регистрацией!
+        description: Сообщество <span class="p-name-text"><span class="text-white">nacometa.</span><span class="text-warning">com</span></span> поздравляет Вас с регистрацией личного кабинета участника.  Теперь вы можете использовать удобный и понятный интерфейс для того чтобы обмениваться ресурсами и помогать другим участникам сообщества! Кроме того, вы можете отслеживать ваши достижения на странице профиля! Активируйте ваш первый сертификат чтобы начать безвозмездно делиться ресурсами и улучшать свою жизнь вместе с <span class="p-name-text"><span class="text-white">nacometa.</span><span class="text-warning">com</span></span>
+  general:
+    bonus: нет бонусов | {n} бонус | {n} бонуса | {n} бонусов
+    members: Пригласивший вас участник | {n} участник | {n} участник | {n} участник
+    charity: Материальная помощь
+  validationMessages:
+    invalidEmail: Адрес электронной почты должен быть действительным
+    emailRequired: Введите электронную почту
+    mismatchedEmail: Электронные почты не совпадают
+    passwordMinLength: Минимальная длина пароля - 8
+    passwordRequired: Введите пароль
+    mismatchedPassword: Пароли не совпадают
+    firstNameRequired: Введите имя
+    lastNameRequired: Введите фамилию
+    dateOfBirthRequired: Укажите дату рождения
+    ageCheck: Вам должно быть не менее 18 лет
+    citizenshipRequired: Укажите гражданство
+    required: Поле обязательное
+    minLength: >
+      Минимальная длина поля: {length}
+    bankCardNumberInvalid: Неверный номер карты
+    photoProfileSize: Размер фото должен быть не более 2 МБ
+    phoneNumberInvalid: Неверный формат номера телефона
+  layouts:
+    main:
+      leftSidebar:
+        main: Главная
+        orders: Сертификаты
+        payments: Переводы
+        billingInformation: Данные пользователя
+        settings: Настройки
+        help: Помощь
+        logOut: Выход
+        profile: Настройка профиля
+        achievements: Достижения
+      rightSidebar:
+        income: Доход
+        bonusesPending: Бонусы в ожидании
+        bonusesOnConfirmation: Бонусы в подтверждении
+        totalAmount: Общая сумма
+        gold: Золото
+        silver: Серебро
+        bronze: Бронза
+        payments: Переводы
+      mobileSidebar:
+        profile: Настройка профиля
+        paymentData: Мои реквизиты
+        tehPlatform: Тех. оператор
+        docs: Условия и политика
+        lang: Язык
+        help: Поддержка
+        logOut: Выход
+        about: О сообществе nacometa
+    login:
+      termsAndConditions: >
+        Регистрируясь, вы соглашаетесь с нашими <br/>
+        <a target="_blank" href="https://nacometa.com/termanduse/termanduse-ru.html">Условиями использования</a>
+        и <a target="_blank" href="https://nacometa.com/privacypolicy/privacypolicy-ru.html">Политикой конфиденциальности</a>
+  mail:
+    title:
+      new_confirm_registration: 'Несколько шагов до мечты!'
+      email_confirm_landing: 'Подтвердите действие на Ufandao.com'
+      new_password_recovery: 'Восстановление пароля'
+      new_refer_activation: 'Твоя мечта опубликована'
+      new_change_password: 'Смена пароля'
+      share_refer_link: 'Приглашение в Ufandao'
+      new_support: 'Обращение в поддержку'
+      donate_notification: 'Новый донат на твою мечту'
+      new_message_chat_notification: 'Входящее сообщение'
+      new_transfer: '[Ufandao] У вас новый перевод'
+      transfer_sent: '[Ufandao] Вы подтвердили отправку перевода'
+      transfer_confirmed: '[Ufandao] Вы подтвердили выполнение перевода'
+      transfer_accepted: '[Ufandao] Ваш перевод подтверждён получателем'
+      transfer_autoconfirmed: '[Ufandao] Перевод был подтверждён по таймеру'
+      transfer_autoaccepted: '[Ufandao] Перевод был подтверждён по таймеру'
+    body:
+      email_change_request:
+        title: 'Подтвердите свою новую почту в сообществе
+        <a href="https://{{publicDomain}}/index-ru.html" target="_blank">nacometa.com</a>'
+        hello: 'Здравствуйте'
+        intro: 'Данный электронный адрес был указан при смене почтового ящика на сайте
+                  <a href="https://{{publicDomain}}/index-ru.html" target="_blank">nacometa.com</a>.
+                  Нам необходимо убедиться, что это действительно были вы и указали свой адрес.'
+        confirmButton: 'ПОДТВЕРДИТЬ'
+        alternativeLink: 'Вы также можете подтвердить адрес, перейдя по
+                  <a href="https://{{appDomain}}/confirmemail/{{reset_token}}" target="_blank" style="text-decoration:underline;">ссылке</a>.'
+        afterConfirmationInfo: 'После подтверждения регистрации Вы сможете получать информационные
+        сообщения и новости сообщества на текущий почтовый адрес.'
+      new_confirm_registration:
+        title: 'Подтверди регистрацию в сообществе'
+        hello: 'Привет, {{name}}!'
+        thanks: 'Спасибо за регистрацию в нашем сообществе Ufandao.com!'
+        intro: 'Ты всего лишь в нескольких шагах от того, чтобы начать сбор средств на реализацию своей мечты.'
+        stepA: 'Шаг 1. Подтверди свою учетную запись, просто кликнув на кнопку.'
+        confirmButton: 'ПОДТВЕРДИТЬ'
+        stepB: 'Шаг 2. После подтверждения регистрации создай свою первую мечту.'
+        stepC: 'Шаг 3. Следуй инструкциям в Личном Кабинете. Поддержи других участников и поделись своими мечтами с друзьями и сообществом Ufandao!'
+        ifNotButton: 'Если кнопка не активна'
+        copyLink: 'скопируйте и вставьте в браузер следующую ссылку:'
+        cabinetLink: 'ССЫЛКА НА КАБИНЕТ'
+        believe: 'Верю в тебя и твою мечту,'
+        from: 'Катя из Ufandao.com'
+      email_confirm_landing:
+        title: '{{name}}, приветствую! Чтобы подтвердить создание мечты, кликните по ссылке:'
+        confirmButton: 'ПОДТВЕРДИТЬ'
+        ifNotButton: 'Если кнопка не активна'
+        copyLink: 'скопируйте и вставьте в браузер следующую ссылку:'
+      new_change_password:
+        title: 'Пароль от учетной записи изменен'
+        hello: 'Привет, {{name}}!'
+        intro: 'Отправляю тебе данное сообщение, чтобы подтвердить – твой пароль от учетной записи ufandao.com был успешно изменён!'
+        safety: 'Пожалуйста, сохраняй свои персональные данные в безопасном месте и периодически меняй пароль.'
+        care: 'С заботой,'
+        from: 'Катя из Ufandao.com'
+      share_refer_link:
+        title: 'Тебя приглашают присоединиться к сообществу'
+        hello: 'Привет,'
+        intro: 'У нас для тебя отличные новости. {{name}} приглашает тебя присоединиться к сообществу Ufandao.'
+        description: 'Ufandao – это сообщество людей, которые вдохновлены идеей взаимной поддержки и готовы помочь друг другу в осуществлении мечты. Воспользуйся реферальной ссылкой, чтобы сделать свою мечту реальностью и помочь другим.'
+        joinButton: 'ПРИСОЕДИНИТЬСЯ'
+        ifNotButton: 'Если кнопка не активна'
+        copyLink: 'скопируйте и вставьте в браузер следующую ссылку:'
+        believe: 'Верю в тебя и твою мечту,'
+        from: 'Катя из Ufandao.com'
+      new_refer_activation:
+        title: 'Теперь тебе доступна реферальная ссылка'
+        name: '{{name}},'
+        hello: 'Ура, теперь ты часть большого сообщества Ufandao.com! Это значит, что ты поддержал(а) чьи-то мечты и уже на пути к реализации своей. Твоя мечта опубликована на сайте ufandao.com, а значит доступна участникам сообщества и всему миру. Ее можно увидеть в разделе “Мечты участников”. '
+        intro: 'Мы искренне верим в то, что любая мечта может стать реальностью c поддержкой сообщества, поэтому дарим тебе реферальную ссылку. '
+        share: 'Делись своей реферальной ссылкой с друзьями, близкими и единомышленниками,  чтобы они могли присоединиться к сообществу и поддержать твою мечту!'
+        ps: 'P.S. Из наших рассылок ты сможешь узнать много полезного о том, какие инструменты использовать для успешного продвижения своей кампании.'
+        care: 'Верю в тебя и твою мечту,'
+        from: 'Катя из Ufandao.com'
+      new_password_recovery:
+        title: 'Забыл(а) пароль? Его можно восстановить!'
+        intro: 'Кажется, ты забыл(а) пароль? Хорошо, что это не ключ внутри машины с автоматической блокировкой дверей.'
+        help: 'Давай помогу! Для того, чтобы восстановить пароль, достаточно перейти по этой ссылке:'
+        resetPasswordButton: 'СБРОСИТЬ ПАРОЛЬ'
+        ifNotButton: 'Если кнопка не активна'
+        copyLink: 'скопируйте и вставьте в браузер следующую ссылку:'
+        notYou: 'Если запрос на восстановление пароля делал(а) не ты, то просто проигнорируй данное письмо.'
+        care: 'С заботой,'
+        from: 'Катя из Ufandao.com'
+        ig: 'IG'
+      new_support:
+        title: 'Мы получили твое письмо'
+        hello: 'Привет, {{name}}!'
+        info: 'Ты только что обратился в службу поддержки Ufandao со следующим запросом:'
+        received: 'Данным письмом спешу сообщить, что мы получили твое обращение и уже работаем над ним. Дай нам немного времени, и мы скоро вернемся к тебе с ответом!'
+        faq: 'Во время ожидания советую тебе изучить раздел FAQ личного кабинета Ufandao, где мы собрали самые часто задаваемые вопросы. Возможно, там ты найдешь ответ на свой вопрос!'
+        linkFaq: 'ССЫЛКА НА РАЗДЕЛ FAQ'
+        thanks: 'Спасибо, что ты с нами!'
+        believe: 'Верю в тебя и твою мечту,'
+        from: 'Катя из Ufandao.com'
+      donate_notification:
+        title: 'Исполнение мечты не за горами!'
+        name: '{{name}},'
+        intro: 'Только что кто-то поддержал твою мечту! Зайди в личный кабинет и подтверди получение доната.'
+        believe: 'Верю в тебя и твою мечту,'
+        from: 'Катя из UFANDAO'
+      new_message_chat_notification:
+        title: 'Тебе пришло сообщение!'
+        name: '{{name}},'
+        intro: 'Кто-то прислал тебе сообщение. Чтобы прочитать сообщение, скорее пройди в личный кабинет UFANDAO. Мы уверены, что тебя ждут хорошие новости!'
+        believe: 'Верю в тебя и твою мечту,'
+        from: 'Катя из UFANDAO'
+      new_transfer:
+        title: 'Вам отправлен перевод'
+        intro: 'Участник сообщества {{name}} произвёл в ваш адрес безвозмездный перевод на сумму
+        €{{amount}} за сертификат {{certificate}}.'
+        seeDonationButton: 'ПОСМОТРЕТЬ ПЕРЕВОДЫ'
+        details: 'Если вы еще не получили перевод, пожалуйста, дождитесь обработки транзакции банком.'
+        ifFailDetails: 'В случае, если в течение 7 дней со дня получения этого письма средства не
+        поступили на указанный вами счет, пожалуйста, свяжитесь с отправителем с помощью
+        <a href="https://{{appDomain}}/orders/{{order_id}}/donations/{{donation_id}}/chat" target="_blank" style="color:#0068FF;">чата</a>
+        в Личном Кабинете nacometa.com'
+      transfer_sent:
+        title: 'Перевод {{donation_parent_product_id}} успешно подтвержден'
+        intro: 'Вы подтвердили перевод на сумму €{{amount}} за сертификат {{order_product_id}}.'
+        certificateButton: К сертификату
+        waitDetails: 'Далее вам необходимо дождаться подтверждения получения перевода от участника
+        сообщества. Перевод будет успешно завершен после подтверждения второй стороной в течении
+        24 часов.'
+      transfer_confirmed:
+        title: 'Подтверждение {{donation_parent_product_id}} получено'
+        intro: 'Вы подтвердили успешное получение перевода на сумму €{{amount}} за сертификат {{order_product_id}}.'
+      transfer_accepted:
+        title: 'Перевод {{donation_parent_product_id}} подтвержден'
+        intro: 'Получатель подтвердил Ваш перевод на сумму €{{amount}} за сертификат {{order_product_id}}.'
+        confirmButton: К сертификату
+      transfer_autoconfirmed:
+        title: 'Перевод {{donation_parent_product_id}} был автоматически подтвержден'
+        intro: 'Перевод на сумму €{{amount}} за сертификат {{order_product_id}} был подтвержден автоматически по истечению срока ожидания.'
+        details: Если вы еще не получили перевод, пожалуйста, дождитесь обработки транзакции банком.
+        getHelpDetails: 'Если у вас возникли вопросы или сложности с получением перевода, вы можете связаться с отправителем через
+        <a href="https://{{appDomain}}/orders/{{order_id}}/donations/{{donation_id}}/chat" target="_blank" style="color:#0068FF;">чат</a>
+        в Личном Кабинете Ufandao в течении 10 дней с текущего момента.'
+      transfer_autoaccepted:
+        title: 'Перевод {{donation_parent_product_id}} подтвержден'
+        intro: 'Перевод на сумму €{{amount}} за сертификат {{order_product_id}} был подтвержден автоматически ввиду истечения времени ожидания.'
+        certificateButton: К Сертификату
+        chatContact: 'Пожалуйста, имейте в виду что поскольку подтверждение автоматическое получатель может связаться с вами в течении следующих 10 дней через
+        <a href="https://{{appDomain}}/orders/{{order_id}}/donations/{{donation_id}}/chat" target="_blank" style="color:#0068FF;">чат</a>.'
+        provideHelpDetails: ''
+    signature:
+      emailTo: 'Вы получили это письмо, поскольку адрес'
+      regTo: 'был указан на сайте'
+      telegramLink: 't.me/ufandaoru'
+  certificateFile:
+    certificate: Сертификат
+    expiryDate: Срок действия
+    description: >
+      Данный Сертификат является универсальным маркетинговым инструментом и может быть использован только в рамках действия соглашения об использовании сайта онлайн-сообщества  https://nacometa.com.
+      Cертификат не может рассматриваться как ценная бумага, финансовый инструмент, облигация, пай, депозитарная расписка, ипотечный сертификат или как любой другой эквивалент денежных средств
+    holderTitle: Владелец
+  components:
+    donation:
+      ticketNumber: Сертификат
+      transferAmount: Сумма перевода
+      ticketStatus: Статус билета
+      from: От кого
+    orderCheckDonates:
+      certificateNumber: Сертификат {number}
+      status: ГОТОВ К АКТИВАЦИИ
+      memberDetails: Данные участника пригласившего вас в сообщество.
+      transferAmount: Сумма перевода
+      recipient: Получатель
+      cardData: Номер банковской карты
+      bankName: Название банка
+      bankCountry: Страна банка
+      appointment: Назначение
+      applyTransfer: Подтвердить перевод
+      fiveSteps: >
+        5 шагов к обмену ресурсами в <span class="p-name-text"><span class="text-white">nacometa</span><span class="text-warning">.com</span></span>:
+      fiveStepsDescription: 1. Проверить сертификат и перевести 10€ человеку пригласившему вас в сообщество<span class="p-name-text"><span class="text-white">nacometa</span><span class="text-warning">.com</span></span><br />2. Оказать безвозмездную помощь и перевести 20€ первому участнику <span class="p-name-text"><span class="text-white">nacometa.</span><span class="text-warning">com</span></span><br />3. Оказать безвозмездную помощь и перевести 30€  второму участнику <span class="p-name-text"><span class="text-white">nacometa</span><span class="text-warning">.com</span></span><br />4. Оказать безвозмездную помощь и перевести 40€ третьему участнику <span class="p-name-text"><span class="text-white">nacometa.</span><span class="text-warning">com</span></span> <br />5. Зарегистрировать личный кабинет в технической платформе для отслеживания обмена ресурсами, учета вашего рейтинга и продвижения в сообществе <span class="p-name-text"><span class="text-white">nacometa</span><span class="text-warning">.com</span></span>
+      steps: >
+        <p>Сертификат действителен. Для его активации необходимо оказать добровольную помощь пригласившему вас участнику по указанным реквизитам и подтвердить перевод.</p>
+        <p>На следующей странице вам будет предложено совершить 3 безвозмездных перевода участникам сообщества на суммы €20, €30 и €40 и подтвердить действия нажав на кнопку.</p>
+        <p>В случае если у вас возникнут вопросы в процессе переводов, у вас есть возможность начать чат с получателем и уточнить необходимые детали или получить альтернативные реквизиты.</p>
+        <p>После осуществления перевода и нажатия кнопки “Подтвердить перевод” необходимо дождаться подтверждения со стороны получателя. Время ожидания подтверждения занимает не более 24 часов.</p>
+    donationBox:
+      paymentAccepted: Перевод принят
+      paymentDeclined: Перевод отклонен
+      onConfirmation: На подтверждении
+      purpose: Цель кампании
+      memberDetails: Участник, пригласивший вас в сообщество
+      transferAmount: Сумма перевода
+      recipient: Получатель
+      cardData: Номер банковской карты
+      bankName: Название банка
+      bankCountry: Страна банка
+      appointment: Назначение
+      additionalDetails: Дополнительные данные
+      additionalDetailsTextNot: Дополнительных реквизитов нет!
+      openChat: Открыть чат
+      confirm: Подтвердить
+      toMain: На главную
+      dispute: Не получили перевод?
+      totalAmount: Общая сумма
+      bonus: 'Сумма переводов к подтверждению'
+      internalCardData: Номер банковского счёта
+    myDonationBox:
+      incoming: Входящий перевод
+      outgoing: Исходящий перевод
+      certificateNumber: Сертификат {number}
+      name: Имя
+      memberStatus: Уровень участника
+      bankName: Название банка
+      transferAmount: Сумма перевода
+      timeLeft: Осталось времени
+      openChat: Открыть чат
+      confirm: Подтвердить
+      dispute: Не получили перевод?
+      cancel: Отмена
+      info: Данным действием вы подтверждаете перевод, без дальнейшей возможности его оспорить.
+      forCertificate: Для сертификата
+      certificateNo: Сертификат №
+      memberLevel: Уровень {number}
+      disputeModalText: Перед отправкой заявки, пожалуйста, попробуйте найти ответ в базе знаний или связаться через чат с участником сообщества (если вопрос касается перевода)
+      disputeModalBtnFurther: Задать вопрос
+      disputeModalBtnCancle: Закрыть
+      disputeModalQueryTitle: "Пожалуйста, опишите вашу проблему и укажите все детали в случае сложностей с переводом средств (номер сертификата, имя получателя/отправителя, сумма и пр.)"
+      disputeModalQueryTeaxtareaLabel: Описание проблемы
+      disputeModalBtnGet: Отправить запрос
+      disputeModalQuerySuccessText: Запрос успешно принят. Ожидайте ответ на ваш email.
+      FAQ: База знаний
+    orderBox:
+      certificate: Сертификат
+      certificateNumber: Сертификат {number}
+      allPaymentsPassed: 'Ваши сертификаты для приглашения участников в сообщество'
+      specifyPaymentData: "Для возможности получения переводов от других участников, пожалуйста, укажите ваши реквизиты."
+      paymentsPassed: Совершено переводов {current} из {total}
+      awaitingConfirmation: >
+        В ожидании подтверждения: {n}
+      continuePayment: Продолжить
+      specifyDetails: Указать банковские данные
+      certificateManagement: Управление сертификатами
+      shareText: "Привет! Добро пожаловать в онлайн-сообщество nacometa! 
+Регистрируйся на https://nacometa.com и активируй этот Сертификат, чтобы поделиться своей мечтой и получить доступ к неограниченной финансовой поддержке на ее реализацию! 
+"
+    changeEmail:
+      title: Смена Email
+      text: >
+        Нажимая 'СМЕНИТЬ', я соглашаюсь с
+        <a target="_blank" href="https://nacometa.com/termanduse/termanduse-ru.html">Пользовательским соглашением</a> и обработкой моей персональной информации на условиях
+        <a target="_blank" href="https://nacometa.com/privacypolicy/privacypolicy-ru.html">Политики конфиденциальности</a>
+         
+      label: Введите новый Email
+      btn: Сменить
+      successTitle: Готово!
+      successText: На указанный вами email была отправлена ссылка с подтверждением. Перейдите по ней, чтобы завершить смену email.
+    changePassword:
+      title: Смена пароля
+      text: >
+        Нажимая 'СМЕНИТЬ', я соглашаюсь с
+        <a target="_blank" href="https://nacometa.com/termanduse/termanduse-ru.html">Пользовательским соглашением</a> и обработкой моей персональной информации на условиях
+        <a target="_blank" href="https://nacometa.com/privacypolicy/privacypolicy-ru.html">Политики конфиденциальности</a>
+         
+      labelOldPass: Введите старый пароль
+      labelNewPass: Введите новый пароль
+      labelConfirmPass: Повторите новый пароль
+      btn: Сменить
+      successTitle: Готово!
+      successText: Пароль успешно изменен.
+    confirmPassword:
+      btn: Готово
+  pages:
+    home:
+      welcome: ДОБРО ПОЖАЛОВАТЬ, <br />{name}!
+      confirm:
+        Пожалуйста, подтвердите свой номер телефона в настройках профиля. Ваш {uniqueVariable}
+    language:
+      chooseLanguage: Пожалуйста, выберите свой язык
+    login:
+      formTitle: Войти
+      usernameInput: Имя пользователя
+      passwordInput: Пароль
+      submitButton: Войти
+      registration: Зарегистрироваться
+      forgotPassword: Восстановить пароль
+    registration:
+      title: Регистрационная форма
+      email: Email
+      confirmEmail: Подтвердите email
+      firstName: Имя
+      lastName: Фамилия
+      dateOfBirth: Дата рождения
+      male: Мужчина
+      female: Женщина
+      citizenship: Гражданство
+      photo: Нажмите, чтобы поменять фотографию профиля
+      password: Пароль
+      confirmPassword: Подтвердите пароль
+      submit: Зарегистрироваться
+      termsAndConditions: >
+        Отправляя вышеуказанную форму и нажимая кнопку “Зарегистрироваться”, вы принимаете все
+        <a target="_blank" href="https://nacometa.com/termanduse/termanduse-ru.html">Условия использования</a> сообщества
+        <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>.
+    restorePassword:
+      title: Форма восстановления пароля
+      emailInputLabel: ЗАБЫЛИ ПАРОЛЬ?
+      wasSentMessage: Сообщение было отправлено на вашу электронную почту!
+      instruction: Введите адрес вашей электронной почты и мы вышлем ссылку для восстановления пароля.
+      restore: Восстановить
+      login: Авторизоваться
+      send: Отправить
+    donations:
+      btnPlus: Показать ещё
+      helpForParticipants: Помощь участникам сообщества
+      help: >
+        <p>Спасибо что вы поделились с пригласившим вас участником сообщества! Это значит, что Вы поддержали чью-то цель или мечту!</p>
+        <p>Совершив еще 3 (три) добровольных перевода предложенным участникам, вы откроете доступ к приглашению друзей и получению безвозмездной помощи от других участников сообщества.</p>
+      toCertificates: К сертификатам
+      ifNoUpdates: У вас нет уведомлений!
+      placeholderText: На этой странице будут отображаться уведомления о поступающих на ваш счет переводах. Важно! Не забывайте вовремя подтверждать получение средств. 
+      pending: В ожидании
+      confirmed: Подтвержденные
+      filterButton: Фильтр
+      sortButtonAscending: По возрастанию
+      sortButtonDescending: По убыванию
+      filterOptions:
+        title: Выберите параметры перевода
+        allAmounts: Все
+        specifyPeriod: Укажите период
+        fromPeriod: Начало
+        untilPeriod: Окончание
+        daylong: Весь день
+        lastMonth: Последний месяц
+        reset: Сбросить
+        apply: Применить
+        certificate: Сертификат
+        allTransfers: Все переводы
+        incomingTransfers: Входящие переводы
+        outgoingTransfers: Исходящие переводы
+        name: Имя
+    confirmDonation:
+      transferConfirmation: Подтверждение перевода
+      certificateNumber: Сертификат {number}
+      addFile: Прикрепить копию платежного поручения
+      confirmText: Данным действием Вы подтверждаете добровольный перевод в пользу участника сообщества.
+      additionalInfo: >
+        <p>Для подтверждения перевода у получателя есть 24 часа. На случай спорных ситуаций просим вас предоставить копию платежного поручения или иной подтверждающий перевод средств документ.</p>
+        <p>Все переводы осуществляются исключительно на добровольной основе, напрямую между физическими лицами, без участия сообщества</p>
+      confirm: Подтвердить
+      pinBankData: Пожалуйста, прикрепите копию платежного поручения.
+      recipientData: Данные получателя
+      paymentAccount: Номер банковской карты
+      internalPaymentAccount: Номер банковского счёта
+    check:
+      title: Проверка и активация сертификата
+      info: Номер сертификата вы можете получить у человека, пригласившего вас в сообщество
+      checkButton: Проверить
+      notFound: Сертификат {number} не найден
+      backToCommunityButton: ПОПРОБОВАТЬ ЕЩЁ РАЗ
+      inputLabel: Введите номер сертификата
+      certificateIs: Сертификат nacometa - это маркетинговый инструмент, дающий возможность его владельцу приглашать новых участников в сообщество, оказывать и принимать финансовую помощь, а также отслеживать рост вашей команды в режиме реального времени.
+      mustHave: Сертификат содержит данные владельца, уникальный 12-значный номер и QR – код, которым можно быстро и легко поделиться с любым человеком. Чтобы получить свой первый сертификат Ufandao, обратитесь к пригласившему вас члену сообщества. Если вы присоединились к Ufandao напрямую, для запроса свяжитесь с нашей службой поддержки по адресу info@nacometa.com.
+      whyCheck:
+      failedDescription: Возможно вы допустили ошибку при вводе номера сертификата. Попробуйте ввести номер еще раз. В случае повторного возникновения проблемы обратитесь к пригласившему вас участнику сообщества или Службу поддержки <span class="p-name-text"><span class="text-primary">nacometa</span><span class="text-warning">.com</span></span>
+    paymentData:
+      enterBankDetails: Введите свои банковские данные
+      info: Укажите банковские реквизиты для получения безвозмездных переводов от участников сообщества <span class="p-name-text"><span class="text-white">nacometa</span><span class="text-warning">.com</span></span>.
+      nameInput: Имя и фамилия (на латинице)
+      porpose: Выберите цель вашей кампании
+      primaryPaymentTypeId: Основной способ получения переводов
+      accountNumber: Укажите ваши реквизиты
+      reservePaymentTypeId: Запасной способ получения переводов
+      internalAccountNumberInput : Укажите ваши реквизиты
+      bankNameInput: Название банка (полное)
+      bankCountryInput: Страна банка
+      cardNumberInput: Номер банковской карты
+      internalCardNumberInput: Номер банковского счёта
+      messageInput: Сообщение
+      additionalInfo: Вы также можете указать свои дополнительные реквизиты или альтернативные способы получения переводов.
+      attach: Привязать
+      privacyPolicy: <a target="_blank" href="https://nacometa.com/privacypolicy/privacypolicy-ru.html">Политика конфиденциальности</a> в отношении обработки персональных данных.
+      thanksText: >
+        <p> Благодарим Вас за оказание добровольной помощи участникам сообщества! </p>
+        <p> Для возможности получения безвозмездной помощи от других участников, вам необходимо указать свои личные реквизиты. </p>
+      nextStep: " "
+      nextButton: Далее
+      backToCommunityButton: Вернуться назад
+      filterLabel: Cертификат
+      filterTitle: Выберите сертификат
+      titleToPointerChangePayData: Смена данных участника
+      textToPointerChangePayData: Внимание! Перевод средств по новым данным возможен только после их редактирования.
+      btnChangePayData: Редактировать
+      passConfirmTitle: Для подтверждения данного действия введите ваш пароль
+      passwordInput: Введите пароль
+      btnChangePayDone: Готово
+      successTitle: Готово!
+      successText: Реквизиты сохранены. Вы можете изменить их в любое время в настройках платежных данных.
+      notCompleteOrders: Нет данных для редактирования!
+      placeholderText: На этой странице вы сможете редактировать ваши реквизиты для получения средств от участников nacometa. Чтобы начать кампанию по сбору средств на вашу мечту, активируйте ваш Сертификат Ufandao и осуществите добровольные переводы четырем участникам.
+      createText: Данные добавлены!
+      afterFillText: >
+        <p>Поздравляем! Вы стали другом сообщества nacometa! Вы можете увидеть ваш новый статус на странице своего профиля.</p>
+        <p>Будьте уверены, что ваша поддержка поможет нуждающимся людям приблизиться к своей мечте. Теперь вы можете поделиться своей собственной мечтой с членами сообщества и получить финансовую поддержку на ее реализацию!</p> 
+        <p>Не забудьте оформить подписку на провайдера программного обеспечения для отслеживания хода вашей кампаний по сбору средств на мечту. После этого вы получите 4 (четыре) персональных сертификата, которые позволят вам приглашать друзей в сообщество.</p>
+      totalAmount: Общая сумма переводов
+      amountToBeConfirmed: Сумма переводов к подтверждению
+    chat:
+      templates: Шаблоны
+      manualInput: Ручной ввод
+      download: Скачать файл
+      input: Сообщение
+    thanks:
+      title: Спасибо!
+      text: Регистрация успешно завершена! Теперь вы являетесь участником сообщества <span class="p-name-text"><span class="text-white">Ufandao</span><span class="text-warning">.com</span></span>!
+      textEmail: Регистрационное письмо было отправлено на электронную почту
+    profile:
+      title: Редактировать профиль
+      text: Вы можете изменить ваш номер телефона, email или пароль.
+      btnSave: Сохранить
+      emailBoxTitle: Смена Email
+      emailBoxText: Подтверждение о смене E-mail придет на новую указанную почту.
+      emailBoxBtn: Изменить email
+      passBoxTitle: Смена пароля
+      passBoxText: Убедитесь в надежности вашего пароля и никогда не сообщайте и не передавайте третьим лицам.
+      passBoxBtn: Сменить пароль
+      passConfTitle: Подтвердите действие вводом пароля
+      profileUpdated: Данные профиля обновлены
+      close: Закрыть
+    achievements:
+      title: Достижения
+      certificateActivation: Поддержите мечту первого участника
+      shareText: "nacometa.com - это открытое децентрализованное сообщество современных людей, движимых идеей взаимной поддержки и помогающих друг другу осуществить свою мечту. Заходи на https://nacometa.com/ и воспользуйся уникальной моделью win-win фандрайзинга чтобы изменить свою жизнь к лучшему!"
+      nacometaLead: Поддержите мечту еще трех участников
+      nacometaFriend: Пригласите в сообщество четырех друзей
+      sharingMaster: 16 участников поддержали вашу мечту
+      sharingExpert: 64 участника поддержали вашу мечту 
+      sharingPro: 256 участников поддержали вашу мечту
+      btnShare: Пригласить друзей
+      status: Статус
+      member: Зарегистрируйтесь в сообществе
+  validate:
+    isRequired: Поле обязательное
+    emailMustBeValid: Email должен быть правильным.
+    name: Поле обязательное
+  form:
+    password: Пароль
+    phoneNumber: Номер телефона
+  errors:
+    backend:
+      base:
+        update_error: Ошибка обновления
+        aws_error: Ошибка при ответа от AWS
+      user:
+        email_exist: Пользователь с email {email} уже существует в системе
+        id_not_exist: Пользователь с идентификатором {user_id} не существует
+        blocked: Пользователь уже заблокирован
+        active: Статус пользователя уже активен
+        wrong_credentials: Электронный адрес или пароль введены не верно
+        wrong_password: Неверный пароль
+        invalid_reset_token: Неверные данные reset token
+        same_email: Электронный адрес совпадает с существующим
+        email_in_use: Электронный адрес {email} уже занят
+        invalid_name: Некорректное имя
+        password_mismatch: Пароли не совпадают
+        invalid_country: Страна указана не корректно
+        not_18: Вы должны достичь 18, чтобы зарегистрироваться
+        not_18_update: Вы должны быть старше 18 лет
+        terms_and_conditions: Вы должны принять условия и положения платформы, чтобы продолжить
+          регистрацию
+        wrong_old_password: Текущий пароль указан не верно
+        new_password_same_as_old: Новый пароль совпадает с существующим
+        invalid_auth: Invalid authorization data
+        invalid_auth_code: Invalid authorization code
+      order:
+        invalid_order: Неверный заказ
+        not_exist: Заказ с идентификатором  {order_id} не существует
+        application_not_exist: Приложение с идентификатором {app_id} не существует
+        payment_data_error: Ошибка платежных данных
+        unverified_account: Аккаунт должен быть подтвержден
+        validation_failed: Неудалось проверить сертификат. Пожалуйста попробуйте позже.
+        invalid_certificate_number: Неверный номер сертификата
+        invalid_application: Неверное приложение
+        invalid_product: Неверный продукт
+      donation:
+        invalid: Данные указаны неверно
+        donation_invalid_or_payed: Донат указан неверно или уже оплачен
+        order_invalid_or_payed: Заказ доната недействителен или уже оплачен
+        invalid_expires_at: Срок действия доната должен быть больше текущего значения
+        purpose_not_exist: Цель c идентификатором {id} не существует
+      application:
+        name_exist: Приложение с именем {name} существует
+        not_exist: Приложение с идентификатором {app_id} не существует
+        numbers_successive_int: Номера референтных уровней должны быть последовательными целыми числами
+      chat:
+        invalid_template: Шаблон указан неверно
+      country:
+        invalid_id: Идентификаторо страны указан неверно ( {country_id} )
+        invalid: Страна указана неверно
+      payment_data:
+        update_error: Не удалось обновить реквизиты, пожалуйста попробуйте ещё раз позже.
+      payment_type:
+        invalid_payment_type: Тип оплаты указан не верно.
+        no_reserve_payment: Не указан тип оплаты
+      post:
+        not_exist: Пост с идентификатором {id} не существует
+  gdpr:
+    text: 'Наш веб-сайт использует файлы cookie для улучения вашего взаимодействия с сервисами
+      Ufandao.com. Использование файлов cookie помогают нам лучше определять особенности
+      взаимодействия клиентов с сайтом и обеспечить безопасноть данных.<br />
+      Используя данный сайт, вы подтверждаете свое согласие на использование файлов cookie в
+      соответствии с настоящим уведомлением. Для получения дополнительной информации,
+      ознакомьтесь с
+      <a href="https://nacometa.com/privacypolicy/privacypolicy.html" target="_blank">Политикой использования файлов cookie</a>.'
+    button: OK
+
