@@ -1,5 +1,0 @@
-FROM postgres:13.2-alpine
-
-COPY ./tests/mini_seed.sql /docker-entrypoint-initdb.d/seed.sql
-
-CMD ["postgres", "-c", "log_statement=all", "-c", "logging_collector=on", "-c", "log_filename=postgresql-%Y-%m-%d_%H%M%S.log", "-c", "log_directory=pg_log"]

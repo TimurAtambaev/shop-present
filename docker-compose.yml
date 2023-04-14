@@ -4,75 +4,20 @@ services:
    db:
      image: postgres:14.5
      ports:
-       - "5432:5432"
+       - "15432:5432"
      environment:
-       POSTGRES_USER: ${DB_USER}
-       POSTGRES_PASSWORD: ${DB_PASSWORD}
-       POSTGRES_DB: ${DB_NAME}
+       POSTGRES_PASSWORD: dataset
+       POSTGRES_DB: dataset
 
-  redis:
-    image: redis:6-alpine
-    networks:
-      - nacometa
-    ports:
-      - 16379:6379
-
-  nacometa-back:
-    build:
-      dockerfile: Dockerfile
-      context: .
-    env_file:
-      - .env
-    volumes:
-      - ./:/srv/app
-      - ./entrypoint.sh:/usr/local/bin/app
-      - ./config.yaml:/etc/app/config.yaml
-      - ./migrations.ini:/etc/app/migrations.ini
-      - /srv/app/dataset.egg-info
-    depends_on:
-      - postgres
-      - redis
-    ports:
-      - 8080:8080
-    links:
-      - postgres
-      - redis
-      - sockets
-    networks:
-      - nacometa
-
-  commento:
-    image: registry.gitlab.com/commento/commento:latest
-    ports:
-      - 8079:8079
-    environment:
-      COMMENTO_ORIGIN: https://develop-nac-commento.wppdev.ru
-      COMMENTO_PORT: 8079
-      COMMENTO_POSTGRES: postgres://postgres:dataset@postgres:5432/dataset?sslmode=disable
-    depends_on:
-      - postgres
-    networks:
-      - nacometa
-
-  sockets:
-    image: git.webpp.ru:4567/nacometa1/sockets-connector:develop
-    ports:
-      - 8002:8002
-    depends_on:
-      - redis
-    networks:
-      - nacometa
-    environment:
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
-      REDIS_DB: 7
-      DB_USER: postgres
-      DB_PASSWORD: dataset
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_NAME: dataset
-
-networks:
-  nacometa:
-    external:
-      name: nacometa-net
+   dataset:
+     build:
+       dockerfile: Dockerfile
+       context: .
+     env_file:
+       - .env
+     depends_on:
+       - db
+     ports:
+       - "8080:8080"
+     links:
+       - db

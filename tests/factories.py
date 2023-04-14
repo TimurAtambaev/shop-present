@@ -12,7 +12,7 @@ from dataset.tables.country import Country, CountryLanguage
 from dataset.tables.currency import Currency
 from dataset.tables.donate_size import DonateSize
 from dataset.tables.donation import Donation, DonationStatus
-from dataset.tables.dream import Category, Dream, DreamStatus, DreamType
+from dataset.tables.kit import Category, Dream, DreamStatus, DreamType
 from dataset.tables.dream_form import DreamForm
 from dataset.tables.event import Event
 from dataset.tables.notification import Notification

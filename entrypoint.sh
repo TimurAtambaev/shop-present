@@ -2,4 +2,4 @@
 
 set -e
 
-alembic -c /etc/dataset/alembic.ini upgrade head
+alembic -c /etc/alembic.ini upgrade head
