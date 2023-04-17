@@ -16,7 +16,7 @@ class Kit(Base):
     id = sa.Column(  # noqa A003
         "id", sa.Integer, primary_key=True, index=True, autoincrement=True
     )
-    import_id = sa.Column("import_id", sa.Integer, nullable=False)
+    import_id = sa.Column("import_id", sa.String(128), nullable=False)
     citizen_id = sa.Column("citizen_id", sa.Integer, nullable=False)
     town = sa.Column("town", sa.String(256), nullable=False)
     street = sa.Column("street", sa.String(256), nullable=False)

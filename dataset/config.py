@@ -1,9 +1,8 @@
 """Модуль с настройками проекта."""
 import os
-from typing import Any, Optional, Union
-from urllib.parse import urlparse
+from typing import Any, Optional
 
-from pydantic import BaseSettings, PostgresDsn, validator
+from pydantic import BaseSettings, validator
 
 
 class Settings(BaseSettings):

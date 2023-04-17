@@ -2,11 +2,8 @@
 from os import getenv
 
 import sqlalchemy
-from sqlalchemy import create_engine
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
-
-from dataset.config import settings
 
 
 def get_database_url() -> str:
@@ -31,9 +28,4 @@ async_session = sessionmaker(
     async_engine,
     expire_on_commit=False,
     class_=AsyncSession,
-)
-
-sync_engine = create_engine(get_database_url())
-sync_session = sessionmaker(
-    autocommit=False, autoflush=False, bind=sync_engine
 )
