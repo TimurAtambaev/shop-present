@@ -1,13 +1,15 @@
 version: "3"
 
 services:
-   db:
+   postgres:
      image: postgres:14.5
      ports:
        - "15432:5432"
      environment:
        POSTGRES_PASSWORD: dataset
        POSTGRES_DB: dataset
+     networks:
+       - shop
 
    dataset:
      build:
@@ -16,8 +18,15 @@ services:
      env_file:
        - .env
      depends_on:
-       - db
+       - postgres
      ports:
        - "8080:8080"
      links:
-       - db
+       - postgres
+     networks:
+       - shop
+
+networks:
+  shop:
+    external:
+      name: shop-net

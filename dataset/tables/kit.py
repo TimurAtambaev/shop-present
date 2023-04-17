@@ -1,11 +1,7 @@
 """Модель наборов жителей."""
 import sqlalchemy as sa
-
 from sqlalchemy import func
-
-from sqlalchemy.orm import declarative_base
-
-Base = declarative_base()
+from dataset.tables import Base
 
 
 class Kit(Base):

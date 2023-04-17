@@ -1,5 +1,6 @@
-"""Чтобы не падал код где все еще используются таблички."""
+"""Пакет с таблицами."""
+from sqlalchemy.orm import declarative_base
 
-user = None
-donation = None
-dream = None
+Base = declarative_base()
+
+from dataset.tables.kit import *  # noqa F401
