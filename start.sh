@@ -2,6 +2,6 @@
 
 wait-for-it postgres:5432 -t 60
 
-alembic -c /etc/alembic.ini upgrade head
+alembic -c /etc/dataset/alembic.ini upgrade head
 
 uvicorn dataset.app:application --reload --port 8080 --host 0.0.0.0

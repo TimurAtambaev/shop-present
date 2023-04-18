@@ -27,10 +27,10 @@ class Kit(Base):
     gender = sa.Column("gender", sa.String(6), nullable=False)
     relatives = sa.Column("relatives", sa.ARRAY(sa.Integer),
                           nullable=False, default={})
-    created_at = lambda: sa.Column(  # noqa E731
+    created_at = sa.Column(  # noqa E731
     "created_at", sa.TIMESTAMP, server_default=func.now()
 )
-    updated_at = UPDATED_AT_COLUMN = lambda: sa.Column(  # noqa E731
+    updated_at = sa.Column(  # noqa E731
     "updated_at",
     sa.TIMESTAMP,
     server_default=func.now(),

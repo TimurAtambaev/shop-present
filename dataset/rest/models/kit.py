@@ -1,9 +1,10 @@
-"""Модуль с моделями наборов жителей."""
+"""Модуль с pydantic-моделями наборов жителей."""
+from datetime import date
 from typing import List, Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, validator
 
 
-class KitModel(BaseModel):
+class RezidentModel(BaseModel):
     """Модель набора жителей."""
 
     citizen_id: int
@@ -27,7 +28,7 @@ class KitModel(BaseModel):
 class ImportKitModel(BaseModel):
     """Модель загрузки наборов жителей."""
 
-    citizens: List[KitModel]
+    citizens: List[RezidentModel]
 
     class Config:
         """Класс с настройками."""
@@ -36,7 +37,7 @@ class ImportKitModel(BaseModel):
         orm_mode = True
 
 
-class ChangeKitModel(BaseModel):
+class ChangeRezidentModel(BaseModel):
     """Модель изменения информации о жителе."""
 
     town: Optional[str]
@@ -53,3 +54,28 @@ class ChangeKitModel(BaseModel):
 
         arbitrary_types_allowed = True
         orm_mode = True
+
+
+class ResponseRezidentModel(BaseModel):
+    """Модель набора жителей для ответа."""
+
+    citizen_id: int
+    town: str
+    street: str
+    building: str
+    apartment: int
+    name: str
+    birth_date: date
+    gender: str
+    relatives: list
+
+    class Config:
+        """Класс с настройками."""
+
+        arbitrary_types_allowed = True
+        orm_mode = True
+
+    @validator("birth_date")
+    def validate_birth_date(cls, birth_date: date) -> str:
+        """Перевод даты рождения в требуемый строковый формат."""
+        return birth_date.strftime("%d.%m.%Y")

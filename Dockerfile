@@ -7,9 +7,7 @@ RUN apt-get update && \
 
 WORKDIR /srv/app
 
-COPY start.sh ./
-COPY poetry.lock pyproject.toml ./
-COPY entrypoint.sh /usr/local/bin/app
+COPY start.sh poetry.lock pyproject.toml ./
 
 ENV PATH="${PATH}:/root/.local/bin"
 RUN pip install --no-cache-dir --upgrade pip && \
@@ -17,6 +15,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     poetry config virtualenvs.create false && \
     poetry install --no-cache
 
+COPY alembic.ini /etc/dataset/alembic.ini
 COPY tests /srv/app/tests
 COPY dataset /srv/app/dataset
 

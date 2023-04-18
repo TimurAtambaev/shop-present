@@ -2,7 +2,7 @@
 
 Online Gift Shop API (pet project).
 
-# Requirements
+## Requirements
 
 * [Docker](https://docs.docker.com/)
 * [docker-compose](https://docs.docker.com/compose/)
@@ -12,7 +12,9 @@ Online Gift Shop API (pet project).
 Before running make sure port 8080 isn't used by other app.
 
 ```bash
+$ cd shop-present
 $ docker network create shop-net
-cd dataset
-docker-compose up --build --remove-orphans
+$ docker-compose up --build --remove-orphans
 ```
+
+API available on localhost:8080. Documentation: localhost:8080/docs.
