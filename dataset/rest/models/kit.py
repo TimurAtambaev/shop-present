@@ -4,8 +4,8 @@ from typing import List, Optional
 from pydantic import BaseModel, validator
 
 
-class RezidentModel(BaseModel):
-    """Модель набора жителей."""
+class CitizenModel(BaseModel):
+    """Модель информации о жителе."""
 
     citizen_id: int
     town: str
@@ -28,7 +28,7 @@ class RezidentModel(BaseModel):
 class ImportKitModel(BaseModel):
     """Модель загрузки наборов жителей."""
 
-    citizens: List[RezidentModel]
+    citizens: List[CitizenModel]
 
     class Config:
         """Класс с настройками."""
@@ -37,7 +37,7 @@ class ImportKitModel(BaseModel):
         orm_mode = True
 
 
-class ChangeRezidentModel(BaseModel):
+class ChangeCitizenModel(BaseModel):
     """Модель изменения информации о жителе."""
 
     town: Optional[str]
@@ -56,7 +56,7 @@ class ChangeRezidentModel(BaseModel):
         orm_mode = True
 
 
-class ResponseRezidentModel(BaseModel):
+class ResponseCitizenModel(BaseModel):
     """Модель набора жителей для ответа."""
 
     citizen_id: int
