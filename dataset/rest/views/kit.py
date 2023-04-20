@@ -1,11 +1,13 @@
 """Модуль с представлениями обработки запросов."""
 from datetime import datetime
+from typing import List
 
 from loguru import logger
 from fastapi import HTTPException
 from fastapi_utils.cbv import cbv
 from fastapi_utils.inferring_router import InferringRouter
 from sqlalchemy import update, and_, select
+from sqlalchemy.engine.row import RowProxy
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
 from uuid import uuid4
@@ -14,7 +16,7 @@ from starlette.responses import JSONResponse
 
 from dataset.db import async_session
 from dataset.rest.models.kit import (ImportKitModel, ChangeCitizenModel,
-                                     ResponseCitizenModel)
+                                     ResponseCitizenModel, ResponseKitModel)
 from dataset.tables.kit import Kit
 
 router = InferringRouter()
@@ -171,7 +173,23 @@ class Handler:
         return citizen
 
     @router.get("/imports/{import_id}/citizens",
-                response_model=ResponseCitizenModel)
-    async def get_kit(self, import_id: str) -> ResponseCitizenModel:
+                response_model=ResponseKitModel)
+    async def get_kit(self, import_id: str) -> dict:
         """Получить список всех жителей из указанного набора данных."""
+        async with async_session() as session:
+            query = select(Kit).where(Kit.import_id == import_id)
+            try:
+                citizens = (await session.execute(query)).all()
+            except Exception as exc:
+                logger.error(exc)
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)
+                )
+        return {"data": [citizen[0] for citizen in citizens]}
+
+    @router.get("/imports/{import_id}/citizens/birthdays",
+                response_model=ResponseKitModel)
+    async def get_presents(self, import_id: str) -> dict:
+        """Получить список количества подарков родственникам по месяцам."""
+
 

@@ -57,7 +57,7 @@ class ChangeCitizenModel(BaseModel):
 
 
 class ResponseCitizenModel(BaseModel):
-    """Модель набора жителей для ответа."""
+    """Модель жителя для ответа."""
 
     citizen_id: int
     town: str
@@ -79,3 +79,15 @@ class ResponseCitizenModel(BaseModel):
     def validate_birth_date(cls, birth_date: date) -> str:
         """Перевод даты рождения в требуемый строковый формат."""
         return birth_date.strftime("%d.%m.%Y")
+
+
+class ResponseKitModel(BaseModel):
+    """Модель набора жителей для ответа."""
+
+    data: List[ResponseCitizenModel]
+
+    class Config:
+        """Класс с настройками."""
+
+        arbitrary_types_allowed = True
+        orm_mode = True

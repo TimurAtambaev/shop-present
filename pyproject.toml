@@ -6,8 +6,6 @@ authors = ["Timur Atambaev <timur.atambaev@webpp.ru>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-aiohttp = "3.7.2"
-aiohttp_cors = "0.7.0"
 alembic = "^1.8.1"
 asyncpg = "^0.26.0"
 psycopg2-binary = "^2.9.3"
@@ -24,7 +22,6 @@ gunicorn = "20.1.0"
 SQLAlchemy-Utils = "0.38.2"
 sqlalchemy-stubs = "^0.4"
 pip = "^22.2.2"
-numpy = "1.23.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "7.2.0"
