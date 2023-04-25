@@ -3,7 +3,7 @@ from loguru import logger
 from fastapi import HTTPException
 from fastapi_utils.cbv import cbv
 from fastapi_utils.inferring_router import InferringRouter
-from sqlalchemy import update, and_, select, insert, delete
+from sqlalchemy import update, and_, select, insert, delete, text
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
 
@@ -207,9 +207,32 @@ class Handler:
                 )
         return {"data": response_citizens}
 
-    @router.get("/imports/{import_id}/citizens/birthdays",
-                response_model=ResponseCitizensModel)
-    async def get_presents(self, import_id: str) -> dict:
+    @router.get("/imports/{import_id}/citizens/birthdays")
+    async def get_presents(self, import_id: int) -> dict:
         """Получить список количества подарков родственникам по месяцам."""
-
-
+        async with async_session() as session:
+            try:
+                query = f"""
+                SELECT r.citizen_id, date_part('month', birth_date)
+                 FROM citizens c JOIN relations r ON c.import_id = r.import_id
+                   AND c.citizen_id = relative_id
+                     WHERE c.import_id = {import_id};"""
+                sample = (await session.execute(text(query))).all()
+                response_presents = {}
+                for month in range(1, 13):
+                    month_presents = []
+                    citizens = [citizen[0] for citizen in list(
+                        filter(lambda i: i[1] == month, sample))]
+                    for citizen in set(citizens):
+                        month_presents.append(
+                            {"citizen_id": citizen,
+                             "presents": citizens.count(citizen)}
+                        )
+                    response_presents[str(month)] = (month_presents if
+                                                     month_presents else [])
+            except Exception as exc:
+                logger.error(exc)
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)
+                )
+        return {"data": response_presents}
