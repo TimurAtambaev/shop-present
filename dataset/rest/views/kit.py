@@ -185,18 +185,27 @@ class Handler:
 
     @router.get("/imports/{import_id}/citizens",
                 response_model=ResponseCitizensModel)
-    async def get_kit(self, import_id: str) -> dict:
+    async def get_kit(self, import_id: int) -> dict:
         """Получить список всех жителей из указанного набора данных."""
         async with async_session() as session:
-            query = select(Citizens).where(Citizens.import_id == import_id)
             try:
+                query = select(Citizens).where(Citizens.import_id == import_id)
                 citizens = (await session.execute(query)).all()
+                response_citizens = []
+                for citizen in citizens:
+                    citizen_to_dict = citizen._mapping["Citizens"].__dict__
+                    citizen_to_dict["birth_date"] = (
+                        citizen_to_dict["birth_date"].strftime("%d.%m.%Y"))
+                    citizen_to_dict["relatives"] = (
+                        await self.get_citizen_relatives(
+                            session, import_id, citizen_to_dict["citizen_id"]))
+                    response_citizens.append(citizen_to_dict)
             except Exception as exc:
                 logger.error(exc)
                 raise HTTPException(
                     status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)
                 )
-        return {"data": [citizen[0] for citizen in citizens]}
+        return {"data": response_citizens}
 
     @router.get("/imports/{import_id}/citizens/birthdays",
                 response_model=ResponseCitizensModel)

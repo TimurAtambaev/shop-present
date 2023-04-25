@@ -5,8 +5,6 @@ from typing import Callable
 from fastapi import Request, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 
-from dataset.config import settings
-
 request_var: ContextVar = ContextVar("request")
 
 

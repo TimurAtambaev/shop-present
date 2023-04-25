@@ -1,4 +1,4 @@
-"""App declaration and initialization."""
+"""Модуль инициализации приложения."""
 from fastapi import FastAPI
 from fastapi_pagination import add_pagination
 
