@@ -10,7 +10,7 @@ from alembic import context
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 from dataset.db import get_database_url
-from dataset.tables import Base
+from dataset.tables.citizens import Base
 
 config = context.config
 
