@@ -1,4 +1,7 @@
 """Модуль с представлениями обработки запросов."""
+from datetime import datetime
+from typing import List
+
 from loguru import logger
 from fastapi import HTTPException
 from fastapi_utils.cbv import cbv
@@ -9,11 +12,12 @@ from starlette import status
 
 from starlette.responses import JSONResponse
 
+from dataset.config import settings
 from dataset.db import async_session
 from dataset.rest.models.kit import (ImportCitizenModel,
                                      ChangeCitizenModel,
                                      ResponseCitizenModel,
-                                     ResponseCitizensModel)
+                                     ResponseCitizensModel, ResponsePercentilesModel)
 from dataset.tables.citizens import Imports, Citizens, Relations
 
 router = InferringRouter()
@@ -236,3 +240,36 @@ class Handler:
                     status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)
                 )
         return {"data": response_presents}
+
+    @router.get("/imports/{import_id}/towns/stat/percentile/age",
+                response_model=ResponsePercentilesModel)
+    async def get_stat_percentile(self, import_id: int) -> dict:
+        """
+        Получить перцентили p50, p75, p99 по городам для указанного набора данных в разрезе возраста.
+        """
+        async with async_session() as session:
+            try:
+                query = select(Citizens.town).where(Citizens.import_id == import_id).group_by(Citizens.town)
+                towns = [town[0] for town in (await session.execute(query)).all()]
+                result_list = []
+                current_date = datetime.today().date()
+                year_days = settings.YEAR_DAYS
+                accuracy = settings.ACCURACY
+                for town in towns:
+                    query = f"""
+                SELECT PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY citizens.birth_date) AS p50,
+                       PERCENTILE_DISC(0.75) WITHIN GROUP (ORDER BY citizens.birth_date) AS p75,
+                       PERCENTILE_DISC(0.99) WITHIN GROUP (ORDER BY citizens.birth_date) AS p99
+                FROM citizens WHERE import_id = {import_id} AND town = '{town}';"""
+                    percentiles = (await session.execute(text(query))).all()[0]
+                    result_list.append({"town": town,
+                                        "p50": round((current_date - percentiles[0]).days / year_days, accuracy),
+                                        "p75": round((current_date - percentiles[1]).days / year_days, accuracy),
+                                        "p99": round((current_date - percentiles[2]).days / year_days, accuracy)})
+            except Exception as exc:
+                logger.error(exc)
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)
+                )
+
+        return {"data": result_list}

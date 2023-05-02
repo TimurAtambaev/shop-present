@@ -9,8 +9,6 @@ Online Gift Shop API (pet project).
 
 ## Running
 
-Before running make sure port 8080 isn't used by other app.
-
 ```bash
 $ cd shop-present
 $ cp .env.example .env

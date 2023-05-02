@@ -15,6 +15,8 @@ class Settings(BaseSettings):
     PYTEST_XDIST_TESTRUNUID: str = ""
     GS_ENVIRONMENT: str = "test"
     GS_LISTEN: str = "http://0.0.0.0:8080"
+    YEAR_DAYS: int = 365
+    ACCURACY: int = 2
 
     # Database settings
     DB_USER: str = "postgres"

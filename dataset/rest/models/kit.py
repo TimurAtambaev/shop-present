@@ -108,3 +108,30 @@ class ResponseCitizensModel(BaseModel):
 
         arbitrary_types_allowed = True
         orm_mode = True
+
+
+class ResponsePercentileModel(BaseModel):
+    """Модель статистики по перцентилям по городу для ответа."""
+
+    town: str
+    p50: float
+    p75: float
+    p99: float
+
+    class Config:
+        """Класс с настройками."""
+
+        arbitrary_types_allowed = True
+        orm_mode = True
+
+
+class ResponsePercentilesModel(BaseModel):
+    """Модель статистики по перцентилям для ответа."""
+
+    data: List[ResponsePercentileModel]
+
+    class Config:
+        """Класс с настройками."""
+
+        arbitrary_types_allowed = True
+        orm_mode = True
