@@ -1,6 +1,5 @@
 """Модуль с представлениями обработки запросов."""
 from datetime import datetime
-from typing import List
 
 from loguru import logger
 from fastapi import HTTPException
@@ -17,7 +16,8 @@ from dataset.db import async_session
 from dataset.rest.models.kit import (ImportCitizenModel,
                                      ChangeCitizenModel,
                                      ResponseCitizenModel,
-                                     ResponseCitizensModel, ResponsePercentilesModel)
+                                     ResponsePercentilesModel,
+                                     ResponseKitModel, CitizenModel)
 from dataset.tables.citizens import Imports, Citizens, Relations
 
 router = InferringRouter()
@@ -63,13 +63,8 @@ class Handler:
     @router.patch("/imports/{import_id}/citizens/{citizen_id}",
                   response_model=ResponseCitizenModel)
     async def change_kit(self, kit: ChangeCitizenModel, import_id: int,
-                         citizen_id: int) -> ResponseCitizenModel:
+                         citizen_id: int) -> dict:
         """Изменить информацию о жителе в указанном наборе данных."""
-        if not kit:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="request data cannot be empty"
-            )
         async with async_session() as session:
             citizen_relatives = await self.get_citizen_relatives(
                 session, import_id, citizen_id)
@@ -81,12 +76,13 @@ class Handler:
             await self.add_relative_connections(session, import_id,
                                                 citizen_id, add_relatives)
             await self.delete_relative_connections(session, import_id,
-                                                   citizen_id, delete_relatives)
+                citizen_id, delete_relatives)
             await self.change_citizen(session, import_id, citizen_id,
                                       self.get_clean_data(kit))
             await session.commit()
 
-            return await self.get_citizen(session, import_id, citizen_id)
+            return {"data":
+                    await self.get_citizen(session, import_id, citizen_id)}
 
     def get_clean_data(self, kit: ChangeCitizenModel) -> dict:
         """Подготовить данные запроса для сохранения в БД."""
@@ -154,7 +150,8 @@ class Handler:
                 status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)
             )
 
-    async def get_citizen_relatives(self, session: AsyncSession, import_id: int,
+    async def get_citizen_relatives(self, session: AsyncSession,
+                                    import_id: int,
                                     citizen_id: int) -> list:
         """Получить список идентификаторов родственников жителя."""
         query = (select(Relations.relative_id).where(and_(
@@ -170,7 +167,7 @@ class Handler:
         return [relative[0] for relative in citizen_relatives]
 
     async def get_citizen(self, session: AsyncSession, import_id: int,
-                          citizen_id: int) -> ResponseCitizenModel:
+                          citizen_id: int) -> CitizenModel:
         """Получить информацию о жителе."""
         query = (select(Citizens).where(and_(
             Citizens.import_id == import_id,
@@ -185,10 +182,10 @@ class Handler:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)
             )
-        return ResponseCitizenModel(**citizen, relatives=relatives)
+        return CitizenModel(**citizen, relatives=relatives)
 
     @router.get("/imports/{import_id}/citizens",
-                response_model=ResponseCitizensModel)
+                response_model=ResponseKitModel)
     async def get_kit(self, import_id: int) -> dict:
         """Получить список всех жителей из указанного набора данных."""
         async with async_session() as session:
@@ -245,27 +242,38 @@ class Handler:
                 response_model=ResponsePercentilesModel)
     async def get_stat_percentile(self, import_id: int) -> dict:
         """
-        Получить перцентили p50, p75, p99 по городам для указанного набора данных в разрезе возраста.
+        Получить перцентили p50, p75, p99 по городам для указанного набора
+        данных в разрезе возраста.
         """
         async with async_session() as session:
             try:
-                query = select(Citizens.town).where(Citizens.import_id == import_id).group_by(Citizens.town)
-                towns = [town[0] for town in (await session.execute(query)).all()]
+                query = select(Citizens.town).where(
+                    Citizens.import_id == import_id).group_by(Citizens.town)
+                towns = [town[0] for town in
+                         (await session.execute(query)).all()]
                 result_list = []
                 current_date = datetime.today().date()
                 year_days = settings.YEAR_DAYS
-                accuracy = settings.ACCURACY
+                accuracy = settings.ACCURACY_LEVEL
                 for town in towns:
                     query = f"""
-                SELECT PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY citizens.birth_date) AS p50,
-                       PERCENTILE_DISC(0.75) WITHIN GROUP (ORDER BY citizens.birth_date) AS p75,
-                       PERCENTILE_DISC(0.99) WITHIN GROUP (ORDER BY citizens.birth_date) AS p99
-                FROM citizens WHERE import_id = {import_id} AND town = '{town}';"""
+                        SELECT PERCENTILE_DISC(0.5) WITHIN GROUP (
+                            ORDER BY citizens.birth_date) AS p50,
+                               PERCENTILE_DISC(0.75) WITHIN GROUP (
+                            ORDER BY citizens.birth_date) AS p75,
+                               PERCENTILE_DISC(0.99) WITHIN GROUP (
+                            ORDER BY citizens.birth_date) AS p99
+                        FROM citizens WHERE import_id = {import_id}
+                                            AND town = '{town}';"""
                     percentiles = (await session.execute(text(query))).all()[0]
-                    result_list.append({"town": town,
-                                        "p50": round((current_date - percentiles[0]).days / year_days, accuracy),
-                                        "p75": round((current_date - percentiles[1]).days / year_days, accuracy),
-                                        "p99": round((current_date - percentiles[2]).days / year_days, accuracy)})
+                    result_list.append(
+                        {"town": town,
+                         "p50": round((current_date - percentiles[0]).
+                                      days / year_days, accuracy),
+                         "p75": round((current_date - percentiles[1]).
+                                      days / year_days, accuracy),
+                         "p99": round((current_date - percentiles[2]).
+                                      days / year_days, accuracy)})
             except Exception as exc:
                 logger.error(exc)
                 raise HTTPException(

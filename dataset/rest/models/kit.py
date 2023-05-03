@@ -4,7 +4,7 @@ from typing import List, Optional
 
 from fastapi import HTTPException
 from loguru import logger
-from pydantic import BaseModel, validator
+from pydantic import BaseModel, validator, root_validator
 from starlette import status
 
 
@@ -77,8 +77,17 @@ class ChangeCitizenModel(BaseModel):
         arbitrary_types_allowed = True
         orm_mode = True
 
+    @root_validator(pre=True)
+    def check_citizen_values(cls, values):
+        if not any(values):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="request data cannot be empty"
+            )
+        return values
 
-class ResponseCitizenModel(BaseModel):
+
+class CitizenModel(BaseModel):
     """Модель жителя для ответа."""
 
     citizen_id: int
@@ -98,10 +107,22 @@ class ResponseCitizenModel(BaseModel):
         orm_mode = True
 
 
-class ResponseCitizensModel(BaseModel):
+class ResponseCitizenModel(BaseModel):
+    """Модель данных жителя для ответа."""
+
+    data: CitizenModel
+
+    class Config:
+        """Класс с настройками."""
+
+        arbitrary_types_allowed = True
+        orm_mode = True
+
+
+class ResponseKitModel(BaseModel):
     """Модель набора жителей для ответа."""
 
-    data: List[ResponseCitizenModel]
+    data: List[CitizenModel]
 
     class Config:
         """Класс с настройками."""

@@ -10,8 +10,10 @@ alembic = "^1.8.1"
 asyncpg = "^0.26.0"
 psycopg2-binary = "^2.9.3"
 sqlalchemy = {version ="^1.4.41", extras=["asyncio"]}
+aiohttp = "^3.8.4"
 loguru = "0.5.3"
 fastapi = "0.67.0"
+httpx = "0.23.3"
 uvicorn = {version = "0.14.0", extras = ["standard"]}
 fastapi-utils = "0.2.1"
 python-multipart = "0.0.5"
@@ -22,6 +24,7 @@ gunicorn = "20.1.0"
 SQLAlchemy-Utils = "0.38.2"
 sqlalchemy-stubs = "^0.4"
 pip = "^22.2.2"
+nest-asyncio = "1.5.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "7.2.0"

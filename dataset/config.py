@@ -8,7 +8,7 @@ from pydantic import BaseSettings, validator
 class Settings(BaseSettings):
     """Класс настроек."""
 
-    ALEMBIC_PATH: str = "/etc/migrations.ini"
+    ALEMBIC_PATH: str = "/etc/dataset/alembic.ini"
     BASE_DIR: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     TESTING: bool = False
     PYTEST_XDIST_WORKER: str = ""
@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     GS_ENVIRONMENT: str = "test"
     GS_LISTEN: str = "http://0.0.0.0:8080"
     YEAR_DAYS: int = 365
-    ACCURACY: int = 2
+    ACCURACY_LEVEL: int = 2
 
     # Database settings
     DB_USER: str = "postgres"
