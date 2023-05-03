@@ -17,4 +17,3 @@ $ docker-compose up --build
 ```
 
 API available on localhost:8080. Documentation: localhost:8080/docs.
-Task and requests query examples: see TASK.pdf in project root.
